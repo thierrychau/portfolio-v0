@@ -1,17 +1,15 @@
-<!--<p style="color: green"><%#= notice %></p>
-
 <h1>Projects</h1>
 
-<div id="projects">
-  <%# @projects.each do |project| %>-->
+<!--<div id="projects">-->
+  <%# @projects.each do |project| %>
     <%#= render project %>
-<!--    <p>-->
-      <%#= link_to "Show this project", project %>
-<!--    </p>-->
-  <%# end %>
+<!--    <p>
+      
+    </p>
+  <%# end %>-->
 <!--</div>
-
-<%#= link_to "New project", new_project_path %>-->
+-->
+<%= link_to "New project", new_project_path %>
 
 <table class="table">
   <thead>
@@ -20,15 +18,17 @@
       <th scope="col">Project</th>
       <!--<th scope="col">Built with</th>-->
       <th scope="col">Link</th>
+      <th scope="col">Show</th>
     </tr>
   </thead>
   <tbody>
     <% @projects.each do |project| %>
       <tr>
         <td><%= project.date %></td>
-        <td><%= project.title %></td>
+        <td><%= project.name %></td>
         <!--<td><%#= project.project_tags %></td>-->
         <td><%= project.url %></td>
+        <td><%= link_to "See more", project %></td>
       </tr>
     <% end %>
   </tbody>
